@@ -1,0 +1,8 @@
+#!/bin/bash 
+
+until player_pids=$(pidof ${BLOCK_INSTANCE})
+do
+    sleep 10
+done
+
+/usr/lib/i3blocks/playerctl-applet "${BLOCK_INSTANCE}"
